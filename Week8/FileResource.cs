@@ -9,11 +9,13 @@ public class FileResource: Resource, IDisposable
 
     public override void Open()
     {
+        IsOpen = true;
         Console.WriteLine("Opened");
     }
 
     public override void Close()
     {
+        IsOpen = false;
         Console.WriteLine("Closed");
     }
     
